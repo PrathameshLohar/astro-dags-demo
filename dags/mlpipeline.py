@@ -16,9 +16,9 @@ def model_evaluation():
 
 ## define DAG
 with DAG(
-    'ml_pipeline',
+    dag_id ='ml_pipeline',
     start_date= datetime(2024,1,1),
-    schedule_interval= '@weekly'
+    schedule_interval= '@once'
 )as dag:
     
     ## define the functions as task
